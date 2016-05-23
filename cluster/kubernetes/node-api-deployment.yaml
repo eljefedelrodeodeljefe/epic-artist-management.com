@@ -1,0 +1,17 @@
+# kubectl expose deployment node-plus-api --port=80 --target-port=3000 --type=LoadBalancer
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: node-plus-api
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: node-plus-api
+    spec:
+      containers:
+      - name: node-plus-api
+        image: eu.gcr.io/cluster-01-1252/plus-api:0.1.3
+        ports:
+        - containerPort: 3000

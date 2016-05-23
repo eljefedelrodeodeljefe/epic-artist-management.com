@@ -1,0 +1,10 @@
+FROM node:6-slim
+
+RUN mkdir www
+WORKDIR /www
+COPY src/website/ src/website/
+COPY package.json package.json
+RUN npm install --production
+
+EXPOSE 3000
+CMD ["node","src/website/app.js"]

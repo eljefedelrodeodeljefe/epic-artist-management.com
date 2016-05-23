@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: node-plus-website
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: node-plus-website
+    spec:
+      containers:
+      - name: node-plus-website
+        image: eu.gcr.io/cluster-01-1252/plus-website:latest
+        ports:
+        - containerPort: 3000

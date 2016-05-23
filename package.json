@@ -1,0 +1,36 @@
+{
+  "name": "nude-artist-management.com",
+  "version": "0.1.0-alpha",
+  "description": "Website based on express and Vue.js for Nude Artist Management.",
+  "main": "index.js",
+  "scripts": {
+    "dev-api": "nodemon src/api/app.js --watch src/api",
+    "test": "tape 'test/**/*.spec.js'",
+    "build-website": "node src/website/build.js",
+    "build-website-container": "docker build -t eu.gcr.io/cluster-01-1252/plus-website:latest -t eu.gcr.io/cluster-01-1252/plus-website:$TAG -f cluster/container/Dockerfile-Website . && gcloud docker push eu.gcr.io/cluster-01-1252/plus-website:latest && gcloud docker push eu.gcr.io/cluster-01-1252/plus-website:$TAG",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eljefedelrodeodeljefe/nude-artist-management.com.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "Robert Jefe Lindstaedt <robert.lindstaedt@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/eljefedelrodeodeljefe/nude-artist-management.com/issues"
+  },
+  "homepage": "https://github.com/eljefedelrodeodeljefe/nude-artist-management.com#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gcloud": "^0.33.0",
+    "json-chop": "^1.0.5",
+    "mongoose": "^4.4.16",
+    "pino": "^2.4.0",
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}
