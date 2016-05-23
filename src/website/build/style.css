@@ -10,6 +10,7 @@ body {
 div.landing-page > div.hero {
   width: 100%;
   margin: 3em;
+  margin-bottom: 0;
 }
 
 div.landing-page > div.hero > img.landing {
@@ -29,6 +30,6 @@ div.landing-page {
 }
 
 div.landing-page > p.coming-soon {
-  font-family: sans-serif;
-  font-size: 3em;
+  font-family: "Courier New", serif;
+  font-size: 1.5em;
 }
